@@ -17,6 +17,7 @@ export type AsyncComponent = (
 ) => Promise<Component | EsModuleComponent> | Component | void;
 
 export interface ComponentOptions<V extends Vue> {
+  framework7?:any;
   data?: Object | ((this: V) => Object);
   props?: string[] | { [key: string]: PropOptions | Constructor | Constructor[] };
   propsData?: Object;
